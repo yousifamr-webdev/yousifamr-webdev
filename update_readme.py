@@ -5,7 +5,7 @@ from datetime import datetime
 
 # --- YOUR DETAILS ---
 USERNAME = "yousifamr-webdev"
-BIRTHDATE = datetime(2003, 1, 1) # Edit to your exact birth date!
+BIRTHDATE = datetime(2002, 6, 18)
 # --------------------
 
 def fetch_github_stats():
@@ -17,7 +17,7 @@ def fetch_github_stats():
     repos_response = requests.get(repos_url, headers=headers)
     
     if repos_response.status_code != 200:
-        print("Failed to fetch repositories.")
+        print(f"Failed to fetch repositories. Status: {repos_response.status_code}")
         return 0, 0, 0
         
     repos_data = repos_response.json()
@@ -30,34 +30,55 @@ def fetch_github_stats():
     # 2. Iterate through each repo to calculate commits and lines of code
     for repo in original_repos:
         repo_name = repo["name"]
-        
         stats_url = f"https://api.github.com/repos/{USERNAME}/{repo_name}/stats/contributors"
-        stats_response = requests.get(stats_url, headers=headers)
         
-        # GitHub's stats API returns 202 if it needs a moment to calculate stats.
-        if stats_response.status_code == 202:
-            time.sleep(2)
+        # Stronger retry loop for GitHub's 202 Accepted response
+        retries = 3
+        while retries > 0:
             stats_response = requests.get(stats_url, headers=headers)
             
-        if stats_response.status_code == 200:
-            contributors = stats_response.json()
-            for contributor in contributors:
-                # Match your exact username
-                if contributor["author"]["login"].lower() == USERNAME.lower():
-                    total_commits += contributor["total"]
-                    for week in contributor["weeks"]:
-                        total_loc += week["a"]  # 'a' stands for lines added
+            if stats_response.status_code == 200:
+                contributors = stats_response.json()
+                # Make sure the repo isn't completely empty
+                if contributors:
+                    for contributor in contributors:
+                        # Safety check: author can sometimes be None/null in GitHub's API
+                        if contributor.get("author") and contributor["author"].get("login", "").lower() == USERNAME.lower():
+                            total_commits += contributor.get("total", 0)
+                            for week in contributor.get("weeks", []):
+                                total_loc += week.get("a", 0)  # 'a' stands for lines added
+                break # Success! Break out of the retry loop.
+                
+            elif stats_response.status_code == 202:
+                time.sleep(3) # Wait 3 seconds and try again
+                retries -= 1
+            else:
+                break # If it's a 403 or 404, just skip it
                         
     return total_repos, total_commits, total_loc
 
 def calculate_age():
     now = datetime.now()
-    age = (now - BIRTHDATE).days / 365.2425
-    return f"{age:.4f}"
+    
+    years = now.year - BIRTHDATE.year
+    months = now.month - BIRTHDATE.month
+    days = now.day - BIRTHDATE.day
+    
+    # Adjust for negative days
+    if days < 0:
+        months -= 1
+        days += 30 # Approximate days borrowed from the previous month
+        
+    # Adjust for negative months
+    if months < 0:
+        years -= 1
+        months += 12
+        
+    return f"{years} years, {months} months, {days} days"
 
 def main():
     repos, commits, loc = fetch_github_stats()
-    age = calculate_age()
+    uptime_str = calculate_age()
     
     # Format large numbers with commas (e.g., 1,000)
     formatted_commits = f"{commits:,}"
@@ -91,7 +112,7 @@ def main():
         <text x="380" y="56" class="separator">------------------------------------------------</text>
         
         <text x="380" y="80"><tspan class="title">OS:</tspan>                     Caffeine</text>
-        <text x="380" y="96"><tspan class="title">Uptime:</tspan>                 {age}</text>
+        <text x="380" y="96"><tspan class="title">Uptime:</tspan>                 {uptime_str}</text>
         <text x="380" y="112"><tspan class="title">Role:</tspan>                   Web Developer</text>
         <text x="380" y="128"><tspan class="title">IDE:</tspan>                    VSCode</text>
         
