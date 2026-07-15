@@ -1,0 +1,53 @@
+<svg width="850" height="420" viewBox="0 0 850 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .bg { fill: #ffffff; }
+        .text { font-family: "Courier New", Courier, monospace; font-size: 14px; fill: #24292f; white-space: pre; }
+        .title { fill: #0969da; font-weight: bold; }
+        .separator { fill: #57606a; }
+        
+        @media (prefers-color-scheme: dark) {
+            .bg { fill: #0d1117; }
+            .text { fill: #c9d1d9; }
+            .title { fill: #58a6ff; }
+            .separator { fill: #8b949e; }
+        }
+    </style>
+    <rect width="850" height="420" rx="10" class="bg"/>
+    <g class="text">
+    <text x="20" y="40">               .,;:cc::;,.               </text>
+<text x="20" y="56">             .ll:'      ':ll.            </text>
+<text x="20" y="72">            .o;            ;o.           </text>
+<text x="20" y="88">            l;              ;l           </text>
+<text x="20" y="104">            l;              ;l           </text>
+<text x="20" y="120">            .o;            ;o.           </text>
+<text x="20" y="136">             .ll:'      ':ll.            </text>
+<text x="20" y="152">               .,;:cc::;,.               </text>
+<text x="20" y="168">                                         </text>
+<text x="20" y="184">        __   __               _  __      </text>
+<text x="20" y="200">        \ \ / /__  _   _ ___ (_)/ _|     </text>
+<text x="20" y="216">         \ V / _ \| | | / __| | |_       </text>
+<text x="20" y="232">          | | (_) | |_| \__ \ |  _|      </text>
+<text x="20" y="248">          |_|\___/ \__,_|___/_|_|        </text>
+<text x="20" y="264">                                         </text>
+
+        <text x="380" y="40"><tspan class="title">yousifamr-webdev@github</tspan></text>
+        <text x="380" y="56" class="separator">------------------------------------------------</text>
+        
+        <text x="380" y="80"><tspan class="title">OS:</tspan>             Windows 11, Linux</text>
+        <text x="380" y="96"><tspan class="title">Host:</tspan>           Web Developer</text>
+        <text x="380" y="112"><tspan class="title">IDE:</tspan>            VSCode</text>
+        <text x="380" y="128"><tspan class="title">Age:</tspan>            23.5350</text>
+        
+        <text x="380" y="160"><tspan class="title">Languages:</tspan>      JavaScript, Python, HTML, CSS</text>
+        <text x="380" y="176"><tspan class="title">Tools:</tspan>          React, Node.js, Git</text>
+        
+        <text x="380" y="208" class="separator">- Contact --------------------------------------</text>
+        <text x="380" y="224"><tspan class="title">Email.Work:</tspan>     your.email@example.com</text>
+        <text x="380" y="240"><tspan class="title">LinkedIn:</tspan>       linkedin.com/in/yousifamr</text>
+        
+        <text x="380" y="272" class="separator">- GitHub Stats ---------------------------------</text>
+        <text x="380" y="288"><tspan class="title">Repos:</tspan>          18</text>
+        <text x="380" y="304"><tspan class="title">Stars:</tspan>          0</text>
+        <text x="380" y="320"><tspan class="title">Followers:</tspan>      0</text>
+    </g>
+    </svg>
