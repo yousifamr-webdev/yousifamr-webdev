@@ -26,7 +26,7 @@
         <text x="380" y="56" class="separator">------------------------------------------------</text>
         
         <text x="380" y="80"><tspan class="title">OS:</tspan>                     Caffeine</text>
-        <text x="380" y="96"><tspan class="title">Uptime:</tspan>                 24 years, 0 months, 29 days</text>
+        <text x="380" y="96"><tspan class="title">Uptime:</tspan>                 24 years, 1 months, 0 days</text>
         <text x="380" y="112"><tspan class="title">Role:</tspan>                   Web Developer</text>
         <text x="380" y="128"><tspan class="title">IDE:</tspan>                    VSCode</text>
         
@@ -42,8 +42,8 @@
         <text x="380" y="304"><tspan class="title">LinkedIn:</tspan>                linkedin.com/in/yousif-amr-b065723bb</text>
         
         <text x="380" y="336" class="separator">- GitHub Stats ---------------------------------</text>
-        <text x="380" y="352"><tspan class="title">Repos:</tspan>                   18</text>
-        <text x="380" y="368"><tspan class="title">Commits:</tspan>                 67</text>
-        <text x="380" y="384"><tspan class="title">LinesOfCodeWritten:</tspan>      54,301</text>
+        <text x="380" y="352"><tspan class="title">Repos:</tspan>                   19</text>
+        <text x="380" y="368"><tspan class="title">Commits:</tspan>                 68</text>
+        <text x="380" y="384"><tspan class="title">LinesOfCodeWritten:</tspan>      65,917</text>
     </g>
     </svg>
