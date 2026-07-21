@@ -26,7 +26,7 @@
         <text x="380" y="56" class="separator">------------------------------------------------</text>
         
         <text x="380" y="80"><tspan class="title">OS:</tspan>                     Caffeine</text>
-        <text x="380" y="96"><tspan class="title">Uptime:</tspan>                 24 years, 1 months, 2 days</text>
+        <text x="380" y="96"><tspan class="title">Uptime:</tspan>                 24 years, 1 months, 3 days</text>
         <text x="380" y="112"><tspan class="title">Role:</tspan>                   Web Developer</text>
         <text x="380" y="128"><tspan class="title">IDE:</tspan>                    VSCode</text>
         
