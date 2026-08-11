@@ -116,7 +116,7 @@ def main():
         <text x="380" y="112"><tspan class="title">Role:</tspan>                   Web Developer</text>
         <text x="380" y="128"><tspan class="title">IDE:</tspan>                    VSCode</text>
         
-        <text x="380" y="160"><tspan class="title">Languages.Programming:</tspan>   JavaScript, Python</text>
+        <text x="380" y="160"><tspan class="title">Languages.Programming:</tspan>   JavaScript, TypeScript, PHP</text>
         <text x="380" y="176"><tspan class="title">Languages.Computer:</tspan>      HTML, CSS</text>
         <text x="380" y="192"><tspan class="title">Languages.Real:</tspan>          Arabic, English</text>
         
