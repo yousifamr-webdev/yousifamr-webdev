@@ -125,7 +125,7 @@ def main():
         
         <text x="380" y="272" class="separator">- Contact --------------------------------------</text>
         <text x="380" y="288"><tspan class="title">Email.Personal:</tspan>          yousifamr811@gmail.com</text>
-        <text x="380" y="304"><tspan class="title">LinkedIn:</tspan>                linkedin.com/in/yousif-amr-b065723bb</text>
+        <text x="380" y="304"><tspan class="title">LinkedIn:</tspan>                linkedin.com/in/yousif-amr</text>
         
         <text x="380" y="336" class="separator">- GitHub Stats ---------------------------------</text>
         <text x="380" y="352"><tspan class="title">Repos:</tspan>                   {repos}</text>
